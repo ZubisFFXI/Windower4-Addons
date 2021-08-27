@@ -9,11 +9,15 @@ https://github.com/ZubisFFXI/Windower4-Addons/releases
 2. Unzip and place in the Windower\addons folder.
 ![alt text](https://user-images.githubusercontent.com/89662000/131179775-4f65360b-6ee9-4589-aa1a-eda905aa5be9.png "Install Folder")
 3. Run "//lua l chatfilter" in game to load the addon.
+4. Edit the Windower settings.xml file so ChatFilter will run at startup.
+![alt text](https://user-images.githubusercontent.com/89662000/131180770-abbd454a-086d-4d40-9438-a9b008ce2827.png "Settings.xml")
 
 ## Configuration
 
 ### //cf help
 Will show a help menu.
+
+![alt text](https://user-images.githubusercontent.com/89662000/131181083-3ea53450-6e33-4468-abf4-0b4d77388ad6.png "//cf help")
 
 ### //cf list
 Will list currently blocked players or words.
