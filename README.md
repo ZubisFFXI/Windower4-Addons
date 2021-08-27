@@ -21,10 +21,12 @@ Will show a help menu.
 
 ### //cf list
 Will list currently blocked players or words.
+
 ![alt text](https://user-images.githubusercontent.com/89662000/131181395-b0697e71-8722-42f4-8ccb-c09076836471.png "//cf help")
 
 ### //cf block
 Will toggle hiding blocked messages or just highlighting what will be blocked.
+
 ![alt text](https://user-images.githubusercontent.com/89662000/131181781-501bb20c-fce8-4049-867b-e33bf754c26c.png "//cf help")
 
 ### //cf add p player_to_block
