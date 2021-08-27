@@ -119,7 +119,7 @@ windower.register_event('incoming chunk', function(id,data)
 		--Filter Players
 		if settings.filters.players[player_cleaned_key] ~= nil then
 			if settings.block == false then
-				windower.add_to_chat(160, "ChatFilter Player %s. %s: %s":format(chat['Sender Name']:color(50), chat['Sender Name'], chat['Message']))					
+				windower.add_to_chat(160, "Blocked Player %s. %s: %s":format(chat['Sender Name']:color(50), chat['Sender Name'], chat['Message']))					
 			end
 			return true
 		end
@@ -132,7 +132,7 @@ windower.register_event('incoming chunk', function(id,data)
 			for k,v in pairs(settings.filters.words) do
 				if message_cleaned_value:match(v:lower()) then
 					if settings.block == false then			 
-						windower.add_to_chat(160, "ChatFilter Word %s. %s: %s":format(v:color(50), chat['Sender Name'], chat['Message']))		
+						windower.add_to_chat(160, "Blocked Word %s. %s: %s":format(v:color(50), chat['Sender Name'], chat['Message']))		
 					end
 					return true
 				end
@@ -142,7 +142,7 @@ windower.register_event('incoming chunk', function(id,data)
 			for k,v in pairs(default_filters.special_characters) do
 				if message_cleaned_value:match(v:lower()) then
 					if settings.block == false then			 
-						windower.add_to_chat(160, "ChatFilter Default %s. %s: %s":format(v:color(50), chat['Sender Name'], chat['Message']))	   
+						windower.add_to_chat(160, "Blocked Default %s. %s: %s":format(v:color(50), chat['Sender Name'], chat['Message']))	   
 					end
 					return true
 				end
@@ -156,7 +156,7 @@ windower.register_event('incoming chunk', function(id,data)
 		--Filter Skill Ups		
 		if default_filters.skill_pages:contains(tostring(data['Target 1 Action 1 Param'])) then	
 			if settings.block == false then				  
-				windower.add_to_chat(160, "ChatFilter Skill Up.")		   
+				windower.add_to_chat(160, "Blocked Skill Up.")		   
 			end		 
 			return true
 		end	
