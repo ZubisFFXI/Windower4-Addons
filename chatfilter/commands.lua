@@ -40,19 +40,19 @@ commands.actions = {
 }
 commands.filter_types = {
 	p='p',
-	w='w'
+	s='s'
 }
 
 --Display a help section
 function commands.help()
 	log("%s v.%s":format(_addon.name, _addon.version))	
-	log('Usage: //cf (add | remove) (p | w) player_or_word')	
+	log('Usage: //cf (add | remove) (p | s) player_or_string')	
 	log('List Filters: //cf list')		
 	log('Block On/Off: //cf block')	
 	log('Block Off will highlight chat messages that match filters instead of blocking them.')
 	log('====================')	
 	log('Example 1 - Add Player: //cf add p Bob')
-	log('Example 2 - Add Word: //cf add w "Lady Lilith"')	
+	log('Example 2 - Add String: //cf add s "Lady Lilith"')	
 end
 
 --Display error based on invalid selection
@@ -71,16 +71,16 @@ function commands.block()
 	settings:save('all')
 end
 
---Display the list of players and words
+--Display the list of players and strings
 function commands.list()
 	log("Blocked Players":color(250))
-	for i, player in pairs(settings.filters.players) do	
-	  log(' \'' .. player .. '\'')
+	for i, p in pairs(settings.filters.players) do	
+	  log(' \'' .. p .. '\'')
 	end
 	
-	log("Blocked Words":color(250))
-	for i, word in pairs(settings.filters.words) do	
-	  log(' \'' .. word .. '\'')
+	log("Blocked Strings":color(250))
+	for i, s in pairs(settings.filters.strings) do	
+	  log(' \'' .. s .. '\'')
 	end	
 end
 
@@ -108,28 +108,28 @@ function commands.remove_player(player)
 	notice("The player '%s' is unblocked.":format(cleaned_value):color(50))	
 end
 
---Add a word to the list
-function commands.add_word(word)
-	local cleaned_key = windower.convert_auto_trans(word):lower():gsub('%W','')
-	local cleaned_value = windower.convert_auto_trans(word):lower()
+--Add a string to the list
+function commands.add_string(str)
+	local cleaned_key = windower.convert_auto_trans(str):lower():gsub('%W','')
+	local cleaned_value = windower.convert_auto_trans(str):lower()
 	
-	if settings.filters.words[cleaned_key] == nil then
-		settings.filters.words[cleaned_key] = cleaned_value
+	if settings.filters.strings[cleaned_key] == nil then
+		settings.filters.strings[cleaned_key] = cleaned_value
 		settings:save('all')
 	end
 
-	notice("The word '%s' is blocked.":format(cleaned_value):color(50))
+	notice("The string '%s' is blocked.":format(cleaned_value):color(50))
 end
 
---Remove a word from the list
-function commands.remove_word(word)
-	local cleaned_key = windower.convert_auto_trans(word):lower():gsub('%W','')
-	local cleaned_value = windower.convert_auto_trans(word):lower()
+--Remove a string from the list
+function commands.remove_string(str)
+	local cleaned_key = windower.convert_auto_trans(str):lower():gsub('%W','')
+	local cleaned_value = windower.convert_auto_trans(str):lower()
 		
-	settings.filters.words[cleaned_key] = nil
+	settings.filters.strings[cleaned_key] = nil
 	settings:save('all')
 
-	notice("The word '%s' is unblocked.":format(cleaned_value):color(50))	
+	notice("The string '%s' is unblocked.":format(cleaned_value):color(50))	
 end
 
 return commands

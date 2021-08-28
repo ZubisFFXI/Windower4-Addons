@@ -88,22 +88,22 @@ windower.register_event('addon command',function (...)
 		return 
 	end 
 	
-	-- --If the action was add, add the player or word.
+	-- --If the action was add, add the player or string.
 	if action == 'add' then
 		if filter_type == 'p' then
 			commands.add_player(filter_text)
-		elseif filter_type == 'w' then
-			commands.add_word(filter_text)
+		elseif filter_type == 's' then
+			commands.add_string(filter_text)
 		end
 		return		
 	end
 	
-	--If the action was remove, remove the player or word.
+	--If the action was remove, remove the player or string.
 	if action == 'remove' then
 		if filter_type == 'p' then
 			commands.remove_player(filter_text)
-		elseif filter_type == 'w' then
-			commands.remove_word(filter_text)
+		elseif filter_type == 's' then
+			commands.remove_string(filter_text)
 		end
 		return		
 	end 
@@ -128,21 +128,21 @@ windower.register_event('incoming chunk', function(id,data)
 		if (chat['Mode'] == 3 or chat['Mode'] == 1 or chat['Mode'] == 26) then
 			local message_cleaned_value = windower.convert_auto_trans(chat['Message']):lower()		
 		
-			--Filter Words 
-			for k,v in pairs(settings.filters.words) do
+			--Filter Strings 
+			for k,v in pairs(settings.filters.strings) do
 				if message_cleaned_value:match(v:lower()) then
 					if settings.block == false then			 
-						windower.add_to_chat(160, "Blocked Word %s. %s: %s":format(v:color(50), chat['Sender Name'], chat['Message']))		
+						windower.add_to_chat(160, "Blocked String %s. %s: %s":format(v:color(50), chat['Sender Name'], chat['Message']))		
 					end
 					return true
 				end
 			end
 			
-			--Filter Defaults 
+			--Filter Default Strings
 			for k,v in pairs(default_filters.special_characters) do
 				if message_cleaned_value:match(v:lower()) then
 					if settings.block == false then			 
-						windower.add_to_chat(160, "Blocked Default %s. %s: %s":format(v:color(50), chat['Sender Name'], chat['Message']))	   
+						windower.add_to_chat(160, "Blocked Default String %s. %s: %s":format(v:color(50), chat['Sender Name'], chat['Message']))	   
 					end
 					return true
 				end
