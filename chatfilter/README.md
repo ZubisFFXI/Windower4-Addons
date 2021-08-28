@@ -14,7 +14,7 @@ https://github.com/ZubisFFXI/Windower4-Addons/releases
 ### //cf help
 Will show a help menu.
 
-![alt text](https://user-images.githubusercontent.com/89662000/131204804-8b992811-a457-45ac-b8d2-950fe84a8338.png "//cf help")
+![alt text](https://user-images.githubusercontent.com/89662000/131205048-4fd91634-16f1-4c1f-9783-e013d3425fa2.png "//cf help")
 
 ### //cf list
 Will list currently blocked players or strings.
