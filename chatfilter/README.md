@@ -19,12 +19,12 @@ Will show a help menu.
 ### //cf list
 Will list currently blocked players or strings.
 
-![alt text](https://user-images.githubusercontent.com/89662000/131181395-b0697e71-8722-42f4-8ccb-c09076836471.png "//cf list")
+![alt text](https://user-images.githubusercontent.com/89662000/131205285-961be53a-6d1e-452f-aa2e-672775be68b1.png "//cf list")
 
 ### //cf block
 Will toggle hiding blocked messages or just highlighting what will be blocked.
 
-![alt text](https://user-images.githubusercontent.com/89662000/131204917-5f2ae0ea-e34c-4d38-8c70-3f3943216722.png "//cf block")
+![alt text](https://user-images.githubusercontent.com/89662000/131205327-4aa7cbb0-9216-4567-8995-3eaba611558c.png "//cf block")
 
 ### //cf add p player_to_block
 Add a player to the blocklist.
@@ -48,3 +48,12 @@ Please suggest what you're adding instead on GitHub or FFXIAH, as it could be va
 
 ### Skill Up Books/Other
 Similar to the above, Skill Up Books are blocked. This can be also edited in the default_filters.lua file.
+
+### Specific Strings
+Adding a generic "Job Points" string will block any reference to Job Points, including anyone who /tells you a question about Job Points.
+Be more specific, ie "Dho Gates Job Points"
+
+### Use the //cf block command to check for mistakes
+Just in case you blocked a single vowel or something...
+
+![alt text](https://user-images.githubusercontent.com/89662000/131205422-53454c69-d6c5-4552-9335-975db2e71e78.png) "Blocked vowel"
