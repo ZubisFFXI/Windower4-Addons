@@ -53,7 +53,7 @@ Similar to the above, Skill Up Books are blocked. This can be also edited in the
 Adding a generic "Job Points" string will block any reference to Job Points, including anyone who /tells you a question about Job Points.
 Be more specific, ie "Dho Gates Job Points"
 
-### Use the //cf block command to check for mistakes
-Just in case you blocked a single vowel and the zone gets really quiet...
+### Use the //cf block command often to check for mistakes
+Just in case you blocked a single vowel and the zone got really quiet...
 
 ![alt text](https://user-images.githubusercontent.com/89662000/131205422-53454c69-d6c5-4552-9335-975db2e71e78.png "Blocked vowel")
