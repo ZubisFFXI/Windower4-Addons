@@ -130,7 +130,7 @@ windower.register_event('incoming chunk', function(id,data)
 		
 			--Filter Strings 
 			for k,v in pairs(settings.filters.strings) do
-				if message_cleaned_value:match(v:lower()) then
+				if string.find(message_cleaned_value, v:lower(), 1, true) then
 					if settings.block == false then			 
 						windower.add_to_chat(160, "Blocked String %s. %s: %s":format(v:color(50), chat['Sender Name'], chat['Message']))		
 					end
@@ -140,7 +140,7 @@ windower.register_event('incoming chunk', function(id,data)
 			
 			--Filter Default Strings
 			for k,v in pairs(default_filters.special_characters) do
-				if message_cleaned_value:match(v:lower()) then
+				if string.find(message_cleaned_value, v:lower(), 1, true) then
 					if settings.block == false then			 
 						windower.add_to_chat(160, "Blocked Default String %s. %s: %s":format(v:color(50), chat['Sender Name'], chat['Message']))	   
 					end

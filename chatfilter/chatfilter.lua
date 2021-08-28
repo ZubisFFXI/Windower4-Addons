@@ -25,7 +25,7 @@
 --SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 _addon.name = 'ChatFilter'
-_addon.version = '0.0.1'
+_addon.version = '0.0.2'
 _addon.author = 'Zubis (Asura)'
 _addon.commands = {'chatfilter','cf'}
 
