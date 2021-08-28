@@ -54,6 +54,6 @@ Adding a generic "Job Points" string will block any reference to Job Points, inc
 Be more specific, ie "Dho Gates Job Points"
 
 ### Use the //cf block command to check for mistakes
-Just in case you blocked a single vowel or something...
+Just in case you blocked a single vowel and the zone gets really quiet...
 
-![alt text](https://user-images.githubusercontent.com/89662000/131205422-53454c69-d6c5-4552-9335-975db2e71e78.png) "Blocked vowel"
+![alt text](https://user-images.githubusercontent.com/89662000/131205422-53454c69-d6c5-4552-9335-975db2e71e78.png "Blocked vowel")
