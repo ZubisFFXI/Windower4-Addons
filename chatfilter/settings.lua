@@ -31,7 +31,7 @@ local defaults = T{}
 defaults.block = true
 defaults.filters = {}
 defaults.filters.players = {}
-defaults.filters.words = {}
+defaults.filters.strings = {}
     
 local settings = config.load(defaults)
 settings:save('all')

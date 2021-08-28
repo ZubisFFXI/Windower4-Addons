@@ -35,7 +35,7 @@ default_filters.special_characters = T{
 	string.char(0x81,0x9A), --'☆'
 }
 
---Will hide skill level rises by 0.1 points messages.
+--Will hide use of skill books.
 default_filters.skill_pages = T{
 	'6147', 
 	'6148', 
