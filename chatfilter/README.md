@@ -14,17 +14,17 @@ https://github.com/ZubisFFXI/Windower4-Addons/releases
 ### //cf help
 Will show a help menu.
 
-![alt text](https://user-images.githubusercontent.com/89662000/131205048-4fd91634-16f1-4c1f-9783-e013d3425fa2.png "//cf help")
+![alt text](https://user-images.githubusercontent.com/89662000/135903981-70bc9cba-1643-478c-af75-bea12228c0b5.png "//cf help")
 
 ### //cf list
 Will list currently blocked players or strings.
 
 ![alt text](https://user-images.githubusercontent.com/89662000/131205285-961be53a-6d1e-452f-aa2e-672775be68b1.png "//cf list")
 
-### //cf block
-Will toggle hiding blocked messages or just highlighting what will be blocked.
+### //cf show | hide
+Will show or hide filtered messages.
 
-![alt text](https://user-images.githubusercontent.com/89662000/131205327-4aa7cbb0-9216-4567-8995-3eaba611558c.png "//cf block")
+![alt text](https://user-images.githubusercontent.com/89662000/131205327-4aa7cbb0-9216-4567-8995-3eaba611558c.png "//cf show")
 
 ### //cf add p player_to_block
 Add a player to the blocklist.
