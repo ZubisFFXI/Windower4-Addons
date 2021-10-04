@@ -28,7 +28,7 @@ require('tables')
 local config = require('config')
 
 local defaults = T{}
-defaults.block = true
+defaults.show = false
 defaults.filters = {}
 defaults.filters.players = {}
 defaults.filters.strings = {}
