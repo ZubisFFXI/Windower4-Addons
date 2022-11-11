@@ -136,9 +136,9 @@ windower.register_event('incoming chunk', function(id,data)
         
             --Filter Strings 
             for k,v in pairs(settings.filters.strings) do
-                if string.find(message_cleaned_value, v:lower(), 1, true) then
+                if string.find(message_cleaned_value, tostring(v):lower(), 1, true) then
                     if settings.show then            
-                        windower.add_to_chat(160, "ChatFilter: Blocked String %s. %s: %s":format(v:color(50), chat['Sender Name'], chat['Message']))        
+                        windower.add_to_chat(160, "ChatFilter: Blocked String %s. %s: %s":format(tostring(v):color(50), chat['Sender Name'], chat['Message']))        
                     end
                     return true
                 end
@@ -146,9 +146,9 @@ windower.register_event('incoming chunk', function(id,data)
             
             --Filter Special Characters
             for k,v in pairs(default_filters.special_characters) do
-                if string.find(message_cleaned_value, v:lower(), 1, true) then
+                if string.find(message_cleaned_value, tostring(v):lower(), 1, true) then
                     if settings.show then            
-                        windower.add_to_chat(160, "ChatFilter: Blocked Default String %s. %s: %s":format(v:color(50), chat['Sender Name'], chat['Message']))       
+                        windower.add_to_chat(160, "ChatFilter: Blocked Default String %s. %s: %s":format(tostring(v):color(50), chat['Sender Name'], chat['Message']))       
                     end
                     return true
                 end
